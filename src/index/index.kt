@@ -2,6 +2,7 @@ package index
 
 import kotlinx.html.style
 import kotlinx.html.title
+import react.RBuilder
 import react.dom.b
 import react.dom.div
 import react.dom.h1
@@ -20,12 +21,8 @@ fun main(args: Array<String>) {
                 attrs.style = kotlinext.js.js {
                     display = "flex" //keeps hands side-by-side
                 }
-                
-                div {
-                    div { b { + "Player Hand"} }
-                    div { b { + "cards go here" } }
-                    div { b { + "12 cards" } }
-                }
+
+                handUi()
 
                 div {
                     div { b { + "Dealer Hand"} }
@@ -34,5 +31,13 @@ fun main(args: Array<String>) {
                 }
             }
         }
+    }
+}
+
+fun RBuilder.handUi() {
+    div {
+        div { b { +"Player Hand" } }
+        div { b { +"cards go here" } }
+        div { b { +"12 cards" } }
     }
 }
