@@ -1,5 +1,6 @@
 package bj
 
+import kotlinext.js.js
 import kotlinx.html.style
 import kotlinx.html.title
 import react.RBuilder
@@ -13,7 +14,7 @@ fun RBuilder.gameUi() {
         }
         div {
             attrs.title = "Hands" //shows title when you hover on this div
-            attrs.style = kotlinext.js.js {
+            attrs.style = js {
                 display = "flex" //keeps hands side-by-side
             }
 
