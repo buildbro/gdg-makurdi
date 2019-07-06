@@ -18,8 +18,8 @@ fun RBuilder.gameUi() {
                 display = "flex" //keeps hands side-by-side
             }
 
-            handUi()
-            handUi()
+            handUi("Player", "13")
+            handUi("Dealer", "17")
         }
     }
 }

@@ -6,7 +6,7 @@ import react.RBuilder
 import react.dom.b
 import react.dom.div
 
-fun RBuilder.handUi() {
+fun RBuilder.handUi(hName: String, gPoints: String) {
     div {
         attrs.style = js {
             width = "10rem"
@@ -16,8 +16,8 @@ fun RBuilder.handUi() {
             marginRight = "1rem"
             background = "cyan"
         }
-        div { b { +"Player Hand" } }
+        div { b { +"$hName Hand" } }
         div { b { +"cards go here" } }
-        div { b { +"12 cards" } }
+        div { b { +"$gPoints cards" } }
     }
 }
